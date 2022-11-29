@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Jogo da Velha</h1>
+
+  <div class="area">
+    <div data-tem="a1" class="item b r"></div>
+    <div data-tem="a2" class="item b r"></div>
+    <div data-tem="a3" class="item b"></div>
+
+    <div data-item="b1" class="item b r"></div>
+    <div data-item="b2" class="item b r"></div>
+    <div data-item="b3" class="item b"></div>
+
+    <div data-item="c1" class="item r"></div>
+    <div data-item="c2" class="item r"></div>
+    <div data-item="c3" class="item"></div>
+  </div>
+
+  <div class="info">
+    <div class="infoitem">
+      <div class="infotitle">The turn to: </div>
+      <div class="infobody turn">--</div>
+    </div>
+    <div class="infoitem">
+      <div class="infotitle">Winner:</div>
+      <div class="infobody result">--</div>
+    </div>
+  </div>
+
+  <button class="reset">Reset</button>
+
+  <footer>Developed to <a href="https://github.com/HugoGomes7">Hugo D'Lucca</a></footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
