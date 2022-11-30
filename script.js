@@ -1,24 +1,14 @@
 let square = {
   a1: '', a2: '', a3: '',
-  b1: '', b2: '', b3: '',
-  c1: '', c2: '', c3: ''
+  b1: 'x', b2: '', b3: 'x',
+  c1: '', c2: 'x', c3: ''
 };
 
 let playerTurn = '';
 let warning = '';
 let playing = false;
 
-function renderSquare() {
-  for (let i in square) {
-    let item = document.querySelector(`div[data-item=${i}]`);
-    item.innerHTML = square[i];
-  }
-}
-
-function renderInfo() {
-  document.querySelector('.turn').innerHTML = playerTurn;
-  document.querySelector('.result').innerHTML = warning;
-}
+document.querySelector('.reset').addEventListener('click', reset);
 
 function reset() {
   warning = '';
@@ -34,4 +24,16 @@ function reset() {
 
   renderSquare();
   renderInfo();
+}
+
+function renderSquare() {
+  for (let i in square) {
+    let item = document.querySelector(`div[data-item=${i}]`);
+    item.innerHTML = square[i];
+  }
+}
+
+function renderInfo() {
+  document.querySelector('.turn').innerHTML = playerTurn;
+  document.querySelector('.result').innerHTML = warning;
 }
