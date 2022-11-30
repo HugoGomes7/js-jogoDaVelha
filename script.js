@@ -1,30 +1,16 @@
 let square = {
-  a1: '', a2: '', a3: '',
-  b1: 'x', b2: '', b3: 'x',
-  c1: '', c2: 'x', c3: ''
+  a1: 'o', a2: 'o', a3: 'o',
+  b1: '', b2: '', b3: '',
+  c1: '', c2: '', c3: ''
 };
 
 let playerTurn = '';
 let warning = '';
 let playing = false;
 
+reset();
+
 document.querySelector('.reset').addEventListener('click', reset);
-
-function reset() {
-  warning = '';
-
-  let random = Math.floor(Math.random() * 2);
-  playerTurn = (random === 0) ? 'x' : 'o';
-
-  for (let i in square) {
-    square[i] = ''
-  }
-
-  playing = true;
-
-  renderSquare();
-  renderInfo();
-}
 
 function renderSquare() {
   for (let i in square) {
@@ -36,4 +22,20 @@ function renderSquare() {
 function renderInfo() {
   document.querySelector('.turn').innerHTML = playerTurn;
   document.querySelector('.result').innerHTML = warning;
+}
+
+function reset() {
+  warning = '';
+
+  let random = Math.floor(Math.random() * 2);
+  playerTurn = (random === 0) ? 'x' : 'o';
+
+  // for (let i in square) {
+  //   square[i] = ''
+  // }
+
+  playing = true;
+
+  renderSquare();
+  renderInfo();
 }
