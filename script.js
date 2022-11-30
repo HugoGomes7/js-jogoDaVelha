@@ -20,6 +20,7 @@ function itemClick(event) {
   if (square[item] === '') {
     square[item] = playerTurn;
     renderSquare();
+    togglePlayer();
   }
 }
 
@@ -49,5 +50,10 @@ function renderSquare() {
 function renderInfo() {
   document.querySelector('.turn').innerHTML = playerTurn;
   document.querySelector('.result').innerHTML = warning;
+}
+
+function togglePlayer() {
+  playerTurn = (playerTurn === 'x') ? 'o' : 'x';
+  renderInfo();
 }
 
