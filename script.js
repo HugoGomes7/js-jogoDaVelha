@@ -93,6 +93,18 @@ function isFull() {
   return true;
 }
 
+function checkGame() {
+  if (checkWinnerFor('x')) {
+    warning = 'Player X won!';
+    playing = false;
+  } else if (checkWinnerFor('o')) {
+    warning = 'Player o won!';
+    playing = false;
+  } else if (isFull()) {
+    warning = 'Draw!';
+    playing = false;
+  }
+}
 
 
 
