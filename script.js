@@ -19,3 +19,19 @@ function renderInfo() {
   document.querySelector('.turn').innerHTML = playerTurn;
   document.querySelector('.result').innerHTML = warning;
 }
+
+function reset() {
+  warning = '';
+
+  let random = Math.floor(Math.random() * 2);
+  playerTurn = (random === 0) ? 'x' : 'o';
+
+  for (let i in square) {
+    square[i] = ''
+  }
+
+  playing = true;
+
+  renderSquare();
+  renderInfo();
+}
